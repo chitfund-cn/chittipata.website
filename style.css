@@ -1,4 +1,50 @@
 body {
+  .modal {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  left: 0; top: 0; width: 100vw; height: 100vh;
+  background: rgba(0,0,0,0.4);
+}
+.modal-content {
+  background: #fff;
+  margin: 5% auto;
+  padding: 24px 20px 12px 20px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 400px;
+  position: relative;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+}
+.close {
+  position: absolute;
+  right: 12px;
+  top: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #e67e22;
+  cursor: pointer;
+}
+.plan-card {
+  background: #fff4e6;
+  border-radius: 16px;
+  padding: 32px 24px;
+  width: 260px;
+  text-align: center;
+  margin-bottom: 1rem;
+  display: inline-block;
+  margin-right: 20px;
+}
+.plan-card button {
+  margin-top: 24px;
+  background: #e67e22;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 18px;
+  font-size: 1rem;
+  cursor: pointer;
+}
   margin: 0;
   font-family: 'Segoe UI', Arial, sans-serif;
   background: #fbf6ef;
@@ -199,4 +245,5 @@ footer {
   .contact-cards { flex-direction: column; align-items: center; }
   .hero { flex-direction: column; text-align: center; }
   .hero-image { margin: 1.5em 0 0 0; }
+
 }
