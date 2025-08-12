@@ -1,44 +1,56 @@
 body {
-  font-family: 'Segoe UI', Arial, sans-serif;
-  background: #fffaf6;
+  font-family: 'Nunito', Arial, sans-serif;
+  background: #fffdf8;
   margin: 0;
   padding: 0;
+  color: #272727;
 }
-
 nav {
-  background: #fff4e6;
-  padding: 18px 0 10px 0;
-  margin-bottom: 24px;
-  box-shadow: 0 3px 8px rgba(230,126,34,0.05);
+  background: linear-gradient(90deg, #f5c26b 0%, #e67e22 100%);
+  padding: 16px 0 10px 0;
+  margin-bottom: 32px;
+  box-shadow: 0 3px 8px rgba(230,126,34,0.13);
 }
 nav ul {
   list-style: none;
   padding: 0;
   margin: 0;
   text-align: right;
+  margin-right: 32px;
 }
 nav li {
   display: inline-block;
-  margin-left: 20px;
+  margin-left: 28px;
 }
 nav a {
-  color: #e67e22;
+  color: #fff;
   text-decoration: none;
-  font-size: 1.2rem;
+  font-size: 1.15rem;
+  font-family: 'Montserrat', 'Nunito', Arial, sans-serif;
   font-weight: bold;
   padding-bottom: 2px;
-  transition: border-bottom 0.2s;
+  letter-spacing: 0.03em;
+  transition: border-bottom 0.2s, color 0.2s;
 }
 nav a.active, nav a:hover {
-  border-bottom: 2px solid #e67e22;
+  border-bottom: 2.5px solid #fff;
+  color: #fffbe7;
 }
 
 h1, h2 {
+  font-family: 'Montserrat', Arial, sans-serif;
   color: #e67e22;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
   text-align: center;
 }
 
+.brand {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: 700;
+  font-size: 2.1rem;
+  color: #c35400;
+  letter-spacing: 0.09em;
+}
 main {
   max-width: 1200px;
   margin: 0 auto;
@@ -50,39 +62,44 @@ main {
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  background: #fff6ee;
+  background: linear-gradient(110deg, #fffbe7 0%, #ffe6ba 100%);
   border-radius: 18px;
-  margin-bottom: 40px;
-  padding: 32px 16px;
+  margin-bottom: 48px;
+  padding: 36px 16px 26px 16px;
   box-shadow: 0 8px 32px rgba(230,126,34,0.07);
 }
 .hero-content {
-  flex: 1 1 320px;
+  flex: 1 1 340px;
   padding: 24px;
 }
 .hero-content h1 {
-  font-size: 2.5rem;
+  font-size: 2.6rem;
+  line-height: 1.2;
 }
 .hero-content p {
-  font-size: 1.2rem;
-  margin: 18px 0 24px 0;
+  font-size: 1.18rem;
+  margin: 22px 0 26px 0;
+  color: #7a4c00;
 }
 .cta-btn {
-  background: #e67e22;
+  background: linear-gradient(90deg, #f5c26b 0%, #e67e22 100%);
   color: #fff;
-  padding: 12px 32px;
+  padding: 12px 34px;
   border: none;
-  border-radius: 5px;
-  font-size: 1.1rem;
+  border-radius: 7px;
+  font-size: 1.18rem;
   text-decoration: none;
-  font-weight: 600;
-  transition: background 0.2s;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: 700;
+  box-shadow: 0 4px 16px rgba(230,126,34,0.10);
+  transition: background 0.2s, transform 0.2s;
 }
 .cta-btn:hover {
-  background: #c35400;
+  background: linear-gradient(90deg, #e67e22 0%, #f5c26b 100%);
+  transform: translateY(-2px) scale(1.04);
 }
 .hero-image {
-  flex: 1 1 320px;
+  flex: 1 1 330px;
   text-align: center;
 }
 .hero-image img {
@@ -91,7 +108,6 @@ main {
   border-radius: 18px;
   box-shadow: 0 8px 32px rgba(230,126,34,0.13);
 }
-
 .features {
   display: flex;
   gap: 2rem;
@@ -107,41 +123,44 @@ main {
   min-width: 220px;
   flex: 1 1 220px;
   text-align: center;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.feature-card:hover {
+  box-shadow: 0 8px 32px rgba(230,126,34,0.15);
+  transform: translateY(-4px) scale(1.03);
 }
 .feature-card h2 {
   margin-bottom: 14px;
   font-size: 1.2rem;
 }
-
 .plan-cards {
   display: flex;
-  gap: 2rem;
+  gap: 2.3rem;
   justify-content: center;
   margin-top: 2rem;
   flex-wrap: wrap;
 }
-
 .plan-card {
-  background: #fff4e6;
+  background: linear-gradient(135deg, #fffbe7 0%, #ffe6ba 100%);
   border-radius: 16px;
-  padding: 32px 24px;
+  padding: 36px 22px;
   box-shadow: 0 2px 10px rgba(230,126,34,0.07);
-  width: 260px;
+  width: 270px;
   text-align: center;
   margin-bottom: 1rem;
   cursor: pointer;
-  transition: box-shadow 0.2s, transform 0.2s;
+  transition: box-shadow 0.2s, transform 0.2s, background 0.2s;
 }
 .plan-card:hover {
   box-shadow: 0 8px 32px rgba(230,126,34,0.15);
-  transform: translateY(-4px) scale(1.03);
+  transform: translateY(-4px) scale(1.04);
+  background: linear-gradient(135deg, #ffe6ba 0%, #fffbe7 100%);
 }
 .plan-card h2 {
   color: #e67e22;
   font-weight: bold;
   margin-bottom: 18px;
 }
-
 .note {
   margin: 2rem auto 0 auto;
   background: #fff4e6;
@@ -152,7 +171,6 @@ main {
   color: #a34e03;
   font-size: 1rem;
 }
-
 .modal {
   display: none;
   position: fixed;
@@ -164,11 +182,16 @@ main {
   background: #fff;
   margin: 5% auto;
   padding: 24px 20px 12px 20px;
-  border-radius: 8px;
+  border-radius: 10px;
   width: 100%;
   max-width: 400px;
   position: relative;
   box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+  animation: modalIn 0.22s;
+}
+@keyframes modalIn {
+  from { transform: translateY(-40px); opacity: 0;}
+  to { transform: translateY(0); opacity: 1;}
 }
 .close {
   position: absolute;
@@ -179,36 +202,40 @@ main {
   color: #e67e22;
   cursor: pointer;
 }
-#planForm label {
+#regForm label, #otpForm label {
   display: block;
   margin-top: 16px;
-  font-weight: 500;
+  font-weight: 600;
 }
-#planForm input, #planForm select {
+#regForm input, #regForm select, #otpForm input {
   width: 100%;
   padding: 7px 10px;
   margin-top: 4px;
-  border: 1px solid #ddd;
+  border: 1px solid #eadaaf;
+  background: #fffbe7;
   border-radius: 4px;
   font-size: 1rem;
 }
-#planForm button[type="submit"] {
+#regForm button[type="submit"], #otpForm button[type="submit"], .upi-options button, .dashboard button {
   margin-top: 18px;
-  background: #e67e22;
+  background: linear-gradient(90deg, #f5c26b 0%, #e67e22 100%);
   color: #fff;
   border: none;
-  border-radius: 4px;
-  padding: 10px 0;
+  border-radius: 6px;
+  padding: 11px 0;
   width: 100%;
-  font-size: 1rem;
+  font-size: 1.12rem;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: bold;
   cursor: pointer;
   transition: background 0.2s;
 }
-#planForm button[type="submit"]:hover {
-  background: #c35400;
+#regForm button[type="submit"]:hover,
+#otpForm button[type="submit"]:hover,
+.upi-options button:hover,
+.dashboard button:hover {
+  background: linear-gradient(90deg, #e67e22 0%, #f5c26b 100%);
 }
-
-/* Contacts */
 .contacts {
   display: flex;
   gap: 2rem;
@@ -233,20 +260,25 @@ main {
   color: #e67e22;
   text-decoration: none;
 }
-
+.dashboard {
+  background: #fffbe7;
+  border: 1.5px solid #e67e22;
+  border-radius: 12px;
+  margin: 20px auto 0 auto;
+  max-width: 400px;
+  padding: 30px 18px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(230,126,34,0.07);
+}
+.dashboard h2 { margin-bottom: 18px; }
+.dashboard button { margin-top: 12px; }
 @media (max-width: 900px) {
   .hero {
     flex-direction: column-reverse;
     text-align: center;
     padding: 22px 4px;
   }
-  .hero-content {
-    padding: 12px;
-  }
-  .hero-image {
-    padding: 12px;
-  }
-  .plan-cards { flex-direction: column; gap: 1.3rem;}
-  .features { flex-direction: column; gap: 1.3rem;}
-  .contacts { flex-direction: column; gap: 1.3rem;}
+  .hero-content { padding: 12px; }
+  .hero-image { padding: 12px; }
+  .plan-cards, .features, .contacts { flex-direction: column; gap: 1.3rem;}
 }
