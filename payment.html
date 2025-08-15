@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Payment | Chittipata</title>
+</head>
+<body>
+  <h2>Select Payment Method</h2>
+
+  <label><input type="radio" name="paymentMethod" value="upi" checked> Pay using UPI App</label>
+  <label><input type="radio" name="paymentMethod" value="qr"> Pay using QR Code</label>
+
+  <div id="upiApp">
+    <a id="upiLink" href="upi://pay?pa=9059076269@upi&pn=Chittipata&am=500" target="_blank">Pay Now</a>
+  </div>
+
+  <div id="qrCode" style="display:none;">
+    <img src="https://api.qrserver.com/v1/create-qr-code/?data=upi://pay?pa=9059076269@upi&pn=Chittipata&am=500&size=200x200" />
+  </div>
+
+  <script src="payment.js"></script>
+</body>
+</html>
