@@ -1,26 +1,36 @@
-import React from 'react';
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Chittipata</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">CHITTIPATA</div>
+    <nav>
+      <ul>
+        <li><a href="index.html#plans">Plans</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+        <li><button id="loginBtn">Login</button></li>
+      </ul>
+    </nav>
+  </header>
 
-const About = () => (
-  <div style={{ padding: "2rem" }}>
-    <h1>About Chit Funds</h1>
-    <p>
-      Chit funds are a popular savings and borrowing scheme practiced in India and other countries. They operate as a type of rotating savings and credit association, where a group of people contributes a fixed amount of money every month. Each month, one member takes the collected sum through a bidding or lottery process.
-    </p>
-    <h2>How Chit Funds Work</h2>
+  <section class="about">
+    <h1>Why Chittipata?</h1>
     <ul>
-      <li>A group (called a "chit group") is formed with a fixed number of members and a tenure.</li>
-      <li>Each member contributes a fixed amount every period (typically monthly).</li>
-      <li>Every period, a pooled amount is given to one member, either by auction or lottery.</li>
-      <li>The process continues until all members have received the pooled amount once.</li>
+      <li>✅ Trusted savings model with guaranteed returns</li>
+      <li>✅ Flexible plans for every budget</li>
+      <li>✅ Transparent tenure and payout structure</li>
+      <li>✅ Instant mobile OTP login and dashboard access</li>
+      <li>✅ Dual payment options: UPI app or QR code</li>
+      <li>✅ Admin monitoring for secure fund management</li>
     </ul>
-    <h2>About Chittipata.website</h2>
-    <p>
-      Chittipata.website is designed to make managing chit funds simple and transparent. With our platform, users can easily join or create chit groups, track payments, and participate in auctions, all from a user-friendly dashboard.
-    </p>
-    <p>
-      Our mission is to bring trust and efficiency to the traditional chit fund system by leveraging technology for enhanced transparency and accessibility.
-    </p>
-  </div>
-);
+  </section>
 
-export default About;
+  <script src="script.js"></script>
+</body>
+</html>
