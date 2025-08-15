@@ -18,6 +18,7 @@
       <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
+
   <main>
     <section class="hero">
       <div class="hero-content" data-aos="fade-right">
@@ -26,10 +27,10 @@
         <a href="plans.html" class="cta-btn">Start Saving</a>
       </div>
       <div class="hero-image" data-aos="fade-left">
-        <!-- AI-generated image for "Safe digital savings" (Unsplash AI as placeholder) -->
         <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=compress&w=800&q=80" alt="AI Generated Savings" />
       </div>
     </section>
+
     <section class="features">
       <div class="feature-card" data-aos="fade-up">
         <h2>Instant Registration</h2>
@@ -44,9 +45,55 @@
         <p>Pay securely via UPI number or QR scan.</p>
       </div>
     </section>
+
+    <!-- 🔐 OTP Verification Section -->
+    <section class="otp-section" data-aos="fade-up" style="margin: 40px auto; max-width: 400px; text-align: center;">
+      <h2>Access Your Dashboard</h2>
+      <input type="email" id="email" placeholder="Enter your email" required style="margin: 10px; padding: 8px; width: 90%;">
+      <button onclick="sendOTP()" style="margin: 10px; padding: 8px 16px;">Send OTP</button>
+      <br>
+      <input type="text" id="otp" placeholder="Enter OTP" required style="margin: 10px; padding: 8px; width: 90%;">
+      <button onclick="verifyOTP()" style="margin: 10px; padding: 8px 16px;">Verify OTP</button>
+    </section>
   </main>
+
   <!-- AOS Animation JS -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>AOS.init({ once: true, duration: 900 });</script>
+
+  <!-- 🔐 OTP Verification Script -->
+  <script>
+    async function sendOTP() {
+      const email = document.getElementById("email").value;
+      if (!email) return alert("Please enter your email");
+
+      const res = await fetch("https://chittipata-otp.onrender.com/send-otp", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email })
+      });
+
+      const data = await res.json();
+      alert(data.message || "OTP sent!");
+    }
+
+    async function verifyOTP() {
+      const email = document.getElementById("email").value;
+      const otp = document.getElementById("otp").value;
+      if (!email || !otp) return alert("Please enter both email and OTP");
+
+      const res = await fetch("https://chittipata-otp.onrender.com/verify-otp", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, otp })
+      });
+
+      const data = await res.json();
+      alert(data.message);
+      if (data.success) {
+        window.location.href = "dashboard.html"; // Redirect after success
+      }
+    }
+  </script>
 </body>
 </html>
